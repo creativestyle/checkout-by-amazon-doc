@@ -1,0 +1,19 @@
+# always-ignore extensions
+*~
+
+# OS or IDE folders
+.DS_Store
+Thumbs.db
+nbproject
+*.sublime-project
+*.sublime-workspace
+.idea
+
+# sphinx folders
+_build
+_static
+_templates
+
+# Python files
+.python-version
+venv
