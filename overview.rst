@@ -4,9 +4,30 @@
 Overview
 ========
 
-This extension provides an official integration of your Magento store with **Amazon Checkout** payment service. They help your customers shop quickly, safely and securely. Your customers can pay on your website without re-entering their payment and address details. All Amazon transactions are protected by Amazon's A-to-z Guarantee.
+This extension provides an official integration of your Magento store with **Amazon Pay** service. They help your customers shop quickly, safely and securely. Your customers can pay on your website without re-entering their payment and address details. All Amazon transactions are protected by Amazon's A-to-z Guarantee.
 
 The extension is a pure payment solution. No item level is communicated to Amazon Payments and it allows you to manage your orders directly from Magento.
+
+About Amazon Pay
+----------------
+Amazon Pay is an end-to-end payment solution that gives hundreds of millions of active Amazon customers a familiar, fast, and secure way to complete their purchase through your online store. Shoppers can use the address and payment information already stored in their Amazon account to check out - avoiding account creation or the need to re-enter their billing and shipping information. The performance is continually optimised by technology, learnings, and best practises from Amazon.  
+
+Key Benefits
+~~~~~~~~~~~~
+* Reduce friction with a payment process that customers trust and can complete in minimal clicks
+* Proactively notify customers when their order is on its way or has arrived with Amazon Alexa
+* Rest assured with advanced fraud protection technology backed by Amazon
+* Easily integrate Amazon Pay into your online store
+
+Key Features
+~~~~~~~~~~~~
+* PSD2 compliant: Built-in support for strong customer authentication as required under PSD2
+* Delivery Notifications: Proactively alert customers on the arrival status of physical goods orders via Amazon Alexa
+* Multi-currency: Maintain the local currency experience across the shopping journey and help customers avoid currency conversion fees from their credit card issuer or bank
+* Amazon Sign-in: Reduce friction during account creation and sign-in by offering a fast and secure way for customers to authenticate through Amazon. Shoppers with an active Amazon account don’t need to login again
+* Automatic Decline Handling: Reduce lost sales with a consistent experience for customers to gracefully recover from a declined payment
+* Payment Protection Policy: Protection against fraud-related chargebacks (check `User Agreement <https://pay.amazon.eu/help/201212430>`_ for more details)
+* Amazon Pay A-to-z Guarantee: Increase customer confidence to complete purchase in your online store with extra assurance on the timeliness of delivery and order quality
 
 
 Getting the extension
@@ -20,8 +41,8 @@ Refer to the :ref:`installation` section to get more details concerning installa
 Extension features
 ------------------
 
-* `Pay with Amazon` button in the shopping cart, in the 1st step of one page checkout and on the product page
-* `Login with Amazon` button on the customer login and registration page
+* `Amazon Pay` button in the shopping cart, in the 1st step of one page checkout and on the product page
+* `Amazon Sign-in` button on the customer login and registration page
 * Support for payment authorizations, captures and refunds (also partial refunds)
 * Supports Amazon Instant Payment Notifications
 * Live & sandbox modes available

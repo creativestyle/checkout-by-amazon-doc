@@ -2,7 +2,7 @@
    :align: left
 
 ==============================================
-Amazon Checkout - extension for Magento 1.x EU
+Amazon Pay (Checkout v2)  - extension for Magento 1.x EU
 ==============================================
 
 Proudly provided by:
