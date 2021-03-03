@@ -10,7 +10,7 @@ Customization
 Frontend templates
 ------------------
 
-If you are using a custom design theme and would like to adjust the appearance of **Login and Pay with Amazon** templates, please complete the following steps (all paths are relative to the Magento root folder):
+If you are using a custom design theme and would like to adjust the appearance of **Amazon Pay** templates, please complete the following steps (all paths are relative to the Magento root folder):
 
 .. warning:: Never edit the default template or skin files directly as they can be (and surely will be) overwritten when upgrading this extension to a newer version. Edit their copies only as described below.
 
@@ -53,22 +53,15 @@ After cloning the above files to your theme folders, you can adjust the design b
 
 .. note:: Please note that the ID attributes of all HTML tags must be preserved, otherwise changes to the corresponding JS scripts must be applied (do not try to change it unless you know what are you doing).
 
-Basic appearance of rendered Amazon widgets (button color and size of all widgets) can be set in the **Pay with Amazon** extension settings (:menuselection:`System --> Configuration --> Amazon Payments`), see :ref:`configuration-common-appearance-settings`, :ref:`configuration-login-appearance-settings` and :ref:`configuration-pay-appearance-settings` for more details.
+Basic appearance of rendered Amazon Pay widgets (button color and size of all widgets) can be set in the **Amazon Pay** extension settings (:menuselection:`System --> Configuration --> Amazon Payments`), see :ref:`configuration-common-appearance-settings`, :ref:`configuration-login-appearance-settings` and :ref:`configuration-pay-appearance-settings` for more details.
 
 
-Amazon Payments logo
+Amazon Pay logo
 --------------------
 
-If you want to place the Amazon Payments logo in your shop to let your customers know you're using payment services provided by Amazon Payments refer to the following guidelines:
+If you want to place the Amazon Pay logo in your shop to let your customers know you're using payment services provided by Amazon Pay, you can find a download link of marketing tools here:
+* UK: https://payments.amazon.co.uk/merchant/tools
+* DE: https://payments.amazon.de/merchant/tools
 
-* logos:
 
-  - UK: https://payments.amazon.co.uk/merchant/tools#marks
-  - DE: https://payments.amazon.de/merchant/tools#marks
-
-* button placement:
-
-  - UK: https://payments.amazon.co.uk/merchant/tools#guidelines
-  - DE: https://payments.amazon.de/merchant/tools#guidelines
-
-To complement the logos you should mention Amazon Payments under your listing of supported payment methods.
+To complement the logos you should mention Amazon Pay under your listing of supported payment methods.

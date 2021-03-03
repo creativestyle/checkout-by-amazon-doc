@@ -2,7 +2,7 @@
    This extension is under the active development even though Adobe dropped the support for Magento 1.x e-commerce platform (Jul 1st, 2020). Creativestyle will provide the necessary updates and support for this extension as long as this extension will be used by the active Amazon Pay merchants.
 
 .. note::
-   If you are looking for the information on how to migrate to the new Amazon Checkout v2 from the legacy Amazon Payment extension, please refer to `Migration to Amazon Checkout v2 <http://doc.lpa.creativetest.de/migration.html>`_ section of the Amazon Payments extension documentation.
+   If you are looking for the information on how to migrate to the new Amazon Checkout v2 from the legacy Amazon Payment extension, please refer to `Migration to Amazon Pay (Checkout v2) <http://doc.lpa.creativetest.de/migration.html>`_ section of the Amazon Pay extension documentation.
 
 .. _installation:
 
@@ -59,12 +59,12 @@ Manual installation
 Post-installation steps
 -----------------------
 
-* If you're using custom design theme, refer to the :ref:`Templates customization <customization-frontend-templates>` section to find out how to adjust **Login and Pay with Amazon** templates to your needs.
+* If you're using custom design theme, refer to the :ref:`Templates customization <customization-frontend-templates>` section to find out how to adjust **Amazon Pay** templates to your needs.
 * Go to :menuselection:`System --> Cache Management` and flush Magento cache storage.
 * If you have disabled compiler in pre-installation stage, you can go now to :menuselection:`System --> Tools --> Compilation`, recompile and enable compiler again.
 * Logout from the Magento admin and login again.
 
-Voila! The **Amazon Checkout v2** extension shall be installed now. You can proceed to the :ref:`configuration` followed by :ref:`customization-frontend-templates` customization (if applicable).
+Voila! The **Amazon Pay (Checkout v2)** extension shall be installed now. You can proceed to the :ref:`configuration` followed by :ref:`customization-frontend-templates` customization (if applicable).
 
 
 Upgrade
@@ -85,9 +85,9 @@ Upgrade process
 
 .. image:: /images/connect_manager_step_2.png
 
-* Click :guilabel:`Check for Upgrades` button in the :guilabel:`Manage Existing Extensions` section. If the newest version of Amazon Checkout is available, the Creativestyle_AmazonCheckout extension on the list will be highlighted with the yellow color. In the corresponding action dropdown list please select :guilabel:`Upgrade to X.X.X (stable)` option and click :guilabel:`Commit changes` button.
+* Click :guilabel:`Check for Upgrades` button in the :guilabel:`Manage Existing Extensions` section. If the newest version of Amazon Pay (Checkout v2) is available, the Creativestyle_AmazonCheckout extension on the list will be highlighted with the yellow color. In the corresponding action dropdown list please select :guilabel:`Upgrade to X.X.X (stable)` option and click :guilabel:`Commit changes` button.
 
-* After the successful upgrade, please click on :guilabel:`Refresh` button to refresh the list of the installed extensions and assure that **Amazon Chekout v2** (identified as `Creativestyle_AmazonCheckout`) was upgraded to the desired version.
+* After the successful upgrade, please click on :guilabel:`Refresh` button to refresh the list of the installed extensions and assure that **Amazon Pay (Chekout v2)** (identified as `Creativestyle_AmazonCheckout`) was upgraded to the desired version.
 
 * Proceed to the :ref:`post-upgrade-steps` section.
 

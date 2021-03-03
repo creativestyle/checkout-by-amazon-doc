@@ -6,9 +6,9 @@
 Order & payment workflow
 ========================
 
-The **Login and Pay with Amazon** extension follows the standard Magento order and payment workflow, and thus processing **Pay with Amazon** payments doesn't differ significantly from other payment methods available in Magento, making it easy to handle. The most important difference, comparing to the standard Magento orders, is delayed access to the billing address, which is backfilled later in the synchronization process after the successful authorization.
+The **Amazon Pay** extension follows the standard Magento order and payment workflow, and thus processing **Amazon Pay** payments doesn't differ significantly from other payment methods available in Magento, making it easy to handle. The most important difference, comparing to the standard Magento orders, is delayed access to the billing address, which is backfilled later in the synchronization process after the successful authorization.
 
-All Amazon payment objects (OrderReference, Authorize, Capture and Refund) are reflected in corresponding payment transactions in Magento, which are connected with appropriate document entities provided by the Magento, (invoices for captures, credit memos for refunds).
+All Amazon Pay objects (ChargePermission, Charge and Refund) are reflected in corresponding payment transactions in Magento, which are connected with appropriate document entities provided by the Magento, (invoices for captures, credit memos for refunds).
 
 
 `Amazon Pay` button
@@ -22,33 +22,33 @@ The `Amazon Pay` button appears in several places in the shop:
 
 .. image:: /images/1.7.2/order_step_1.png
 
-You can also place the `Pay with Amazon` button in any place you like by including following statement in the template file:
+You can also place the `Amazon Pay` button in any place you like by including following statement in the template file:
 
 .. code-block:: html
 
    <div data-lpa-role="pay-button"></div>
 
-Pressing the `Pay with Amazon` button launches the Amazon Payments authentication window, where the customer is asked for his Amazon account e-mail address and password.
+Pressing the `Amazon Pay` button launches the Amazon Payments authentication window, where the customer is asked for his Amazon account e-mail address and password.
 
 .. image:: /images/1.7.2/order_step_2.png
 
-After a successful login the customer is redirected to the Amazon checkout page in your shop.
+After a successful login the customer is redirected to the Amazon Pay checkout page in your shop.
 
 Placing an order
 ----------------
-The **Pay with Amazon** checkout form consists of 4 steps arranged within a single page (unlike Magento default checkout, which uses accordion for showing and hiding particular steps of the checkout). These steps are: shipping address (handled by Amazon's address book widget), payment method (handled by Amazon's wallet widget), shipping method and order review (handled by default Magento checkout templates). All fields in the form (shipping address, payment method and shipping method) are pre-filled, which means that in very basic scenario customer can finish the checkout with just one click. Unfortunately, pre-filling doesn't apply to the terms and conditions checkbox (if used at all) and can raise the number of required clicks, which, however, doesn't affect the easiness and user-friendliness of the **Pay with Amazon** payment method.
+The **Amazon Pay** checkout form consists of 4 steps arranged within a single page (unlike Magento default checkout, which uses accordion for showing and hiding particular steps of the checkout). These steps are: shipping address (provided by Amazon Pay), payment method (provided by Amazon Pay), shipping method and order review (handled by default Magento checkout templates). All fields in the form (shipping address, payment method and shipping method) are pre-filled, which means that in very basic scenario customer can finish the checkout with just one click. Unfortunately, pre-filling doesn't apply to the terms and conditions checkbox (if used at all) and can raise the number of required clicks, which, however, doesn't affect the easiness and user-friendliness of the **Amazon Pay** payment method.
 
 .. image:: /images/1.7.2/order_step_3.png
 
 .. note:: The value selected in each checkout step is saved in a separate AJAX call. When the checkout form shows up for the first time, depending on the internet connection speed  and the web-server's response time, it may take up to few seconds until `Place order` button gets active and can be clicked by the customer.
 
-After selecting the desired shipping address, payment method, shipping method and pressing `Place order` button (preceded by accepting terms and conditions if needed), the customer is redirected to the success page. **Pay with Amazon** uses the default Magento success page, which means there's no need to add any tracking scripts or additional page layout elements that you use in default Magento checkout and want also use in Amazon checkout, all features implemented additionally on the Magento success page shall also appear on Amazon checkout success page.
+After selecting the desired shipping address, payment method, shipping method and pressing `Place order` button (preceded by accepting terms and conditions if needed), the customer is redirected to the success page. **Amazon Pay** uses the default Magento success page, which means there's no need to add any tracking scripts or additional page layout elements that you use in default Magento checkout and want also use in Amazon checkout, all features implemented additionally on the Magento success page shall also appear on Amazon checkout success page.
 
 .. image:: /images/1.7.2/order_step_4.png
 
 The created order will be transferred to Amazon and will appear in your Magento admin in `Pending` (by default) or `Processing` (if you are using :ref:`synchronous authorization <configuration-authorization-processing-mode>`) state.
 
-.. note:: You may notice in the Magento admin that the billing address may be incorrect at this point (as mentioned in the introduction to this chapter). That's true if the billing differs from the shipping data. The only available payment object at the time of placing order is the OrderReference, which, unfortunately, doesn't provide billing data and thus shipping address must be used to meet Magento requirements concerning order data. The billing address will be updated as soon as authorization is confirmed by Amazon Payments. Keep also in mind that the billing address is available only for the sellers that provided a valid VAT number in Amazon Seller Central.
+.. note:: You may notice in the Magento admin that the billing address may be incorrect at this point (as mentioned in the introduction to this chapter). That's true if the billing differs from the shipping data. The billing address will be updated as soon as authorization is confirmed by Amazon Pay. Keep also in mind that the billing address is available only for the sellers that provided a valid VAT number in Amazon Seller Central.
 
 .. _workflow-multicurrency:
 
@@ -82,7 +82,7 @@ An authorization can be requested after the order data is successfully transferr
 Declined authorizations
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the authorization is declined by Amazon due to problem with the payment method selected, your customer will be informed about this case via e-mail and requested to visit the Amazon Payments web site. The customer can on this page update the payment method by following the instructions on the web page. The e-mail sent to the customer can be adjusted according to the :ref:`customization-email-templates` section. After the successful payment method update, Amazon will notify Magento about the new authorization status and payment will get back on the track (via polling or IPN).
+If the authorization is declined by Amazon Pay due to problem with the payment method selected, your customer will be informed about this case via e-mail and requested to visit the Amazon Pay web site. The customer can on this page update the payment method by following the instructions on the web page. The e-mail sent to the customer can be adjusted according to the :ref:`customization-email-templates` section. After the successful payment method update, Amazon Pay will notify Magento about the new authorization status and payment will get back on the track (via polling or IPN).
 
 In case the authorization has been declined due to any other reason then problems with the selected payment method, the notification email will be sent to shop administrator and appropriate action must be undertaken according to the Amazon Payments Integration Guide.
 
@@ -90,9 +90,7 @@ In case the authorization has been declined due to any other reason then problem
 Capturing the payment amount
 ----------------------------
 
-After a successful authorization, you can capture funds against the authorization. The capture, similar to the authorization, can be requested in two modes: manual and automatic. **By default you should capture the order amount at the moment you ship the ordered items by creating an invoice.** You are only allowed to enable automatic capture if you sell digital goods or you ship items the same day they are ordered. Moreover you have to be white-listed by Amazon Payments. Contact Amazon Payments if you want to use this option.
-
-:ref:`configuration-payment-action` option in the extension settings allows to switch between manual and automatic capture mode. For `Manual authorization` & `Authorization` actions the capture is triggerd by creating manually an invoice for the order in the Magento admin. For `Authorize & capture` action, the capture is requested automatically as soon as authorization is confirmed by Amazon Payments.
+After a successful authorization, you can capture funds against the authorization. :ref:`configuration-payment-action` option in the extension settings allows to switch between manual and automatic capture mode. For `Manual authorization` actions the capture is triggerd by creating manually an invoice for the order in the Magento admin. For `Authorize & capture` action, the capture is requested automatically as soon as authorization is confirmed by Amazon Pay.
 
 
 Manual capture
@@ -102,7 +100,7 @@ To capture the order amount, you must create an invoice first. To create an invo
 
 .. image:: /images/workflow_screenshot_4.png
 
-After clicking the `Invoice` button, a new invoice form will appear with most of the crucial data (like products quantity) already filled in. You can adjust some invoice fields if needed. At this point you can create a shipment as well, by checking `Create Shipment` checkbox and adding a tracking number if needed. Before submitting the form, please **make absolutely sure** that `Amount` selectbox is set to `Capture online` and press `Submit Invoice` button. A new invoice and a new shipment (if checked `Create Shipment` checkbox) will be created for the order and the capture request is sent to Amazon Payments.
+After clicking the `Invoice` button, a new invoice form will appear with most of the crucial data (like products quantity) already filled in. You can adjust some invoice fields if needed. At this point you can create a shipment as well, by checking `Create Shipment` checkbox and adding a tracking number if needed. Before submitting the form, please **make absolutely sure** that `Amount` selectbox is set to `Capture online` and press `Submit Invoice` button. A new invoice and a new shipment (if checked `Create Shipment` checkbox) will be created for the order and the capture request is sent to Amazon Pay.
 
 .. image:: /images/workflow_screenshot_5.png
 
@@ -134,13 +132,13 @@ A new credit memo form will appear with most of the crucial data (like products 
 
 .. image:: /images/workflow_screenshot_8.png
 
-.. warning:: For the successful refund (recorded in Magento and requested (!) with Amazon Payments) always use `Refund` button available on the new credit memo form invoked from the single invoice preview page. If you click `Credit Memo` button directly on the order page you will be redirected to the new credit memo form with `Refund offline` button only, which admittedly will record credit memo in Magento, but surely won't call refund request at Amazon Payments gateway. If in any case you will get a credit memo with `Refund offline` button only then surely something had to go wrong and you should stop the refund process immediately and start it from the beginning following the above guideline.
+.. warning:: For the successful refund (recorded in Magento and requested (!) with Amazon Pay) always use `Refund` button available on the new credit memo form invoked from the single invoice preview page. If you click `Credit Memo` button directly on the order page you will be redirected to the new credit memo form with `Refund offline` button only, which admittedly will record credit memo in Magento, but surely won't call refund request at Amazon Payments gateway. If in any case you will get a credit memo with `Refund offline` button only then surely something had to go wrong and you should stop the refund process immediately and start it from the beginning following the above guideline.
 
 
 Cancelling an order
 -------------------
 
-For a variety of reasons it sometimes becomes necessary to cancel an order. To cancel an order and notify Amazon about the payment cancellation:
+For a variety of reasons it sometimes becomes necessary to cancel an order. To cancel an order and notify Amazon Pay about the payment cancellation:
 
 * Please make sure the amount of the order you want to cancel hasn't been captured yet,
 * Go to :menuselection:`Sales --> Orders` and select the order that you would like to cancel by clicking the `Edit button` on its respective row,

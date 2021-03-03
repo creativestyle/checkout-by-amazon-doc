@@ -33,7 +33,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Amazon Checkout v2 - extension for Magento 1.x'
+project = u'Amazon Pay (Checkout v2) - extension for Magento 1.x'
 copyright = u'2020 creativestyle GmbH'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -185,7 +185,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'amazon-checkout-magento-extension.tex', u'Amazon Checkout v2 - extension for Magento 1.x',
+  ('index', 'amazon-checkout-magento-extension.tex', u'Amazon Pay (Checkout v2) - extension for Magento 1.x',
    u'Marek Stefan', 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'amazon-checkout-magento-extension', u'Amazon Checkout v2 - extension for Magento 1.x',
+    ('index', 'amazon-checkout-magento-extension', u'Amazon Pay (Checkout v2) - extension for Magento 1.x',
      [u'Marek Stefan'], 1)
 ]
 
@@ -229,7 +229,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'amazon-checkout-magento-extension', u'Amazon Checkout - extension for Magento 1.x',
+  ('index', 'amazon-checkout-magento-extension', u'Amazon Pay (Checkout v2) - extension for Magento 1.x',
    u'Marek Stefan', 'AmazonCheckoutMagentoExtension', 'One line description of project.',
    'Miscellaneous'),
 ]

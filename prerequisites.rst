@@ -8,7 +8,7 @@ Prerequisites
 System requirements
 -------------------
 
-**Amazon Checkout** Magento extension requires you to have a valid **Amazon Payments** account and a webserver running a Magento store instance with the following conditions met:
+**Amazon Pay (Checkout v2)** Magento extension requires you to have a valid **Amazon Payments** account and a webserver running a Magento store instance with the following conditions met:
 
 * Magento CE 1.9.4 or higher
 * cURL for PHP
