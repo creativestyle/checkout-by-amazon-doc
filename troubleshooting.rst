@@ -1,6 +1,3 @@
-.. important::
-   This extension is under the active development even though Adobe dropped the support for Magento 1.x e-commerce platform (Jul 1st, 2020). Creativestyle will provide the necessary updates and support for this extension as long as this extension will be used by the active Amazon Pay merchants.
-
 .. _troubleshooting:
 
 Troubleshooting

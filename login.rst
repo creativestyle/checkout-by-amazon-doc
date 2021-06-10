@@ -1,13 +1,10 @@
-.. important::
-   This extension is under the active development even though Adobe dropped the support for Magento 1.x e-commerce platform (Jul 1st, 2020). Creativestyle will provide the necessary updates and support for this extension as long as this extension will be used by the active Amazon Pay merchants.
-
 Login with Amazon
 =================
-**Login with Amazon** allows users to login to your shop using their Amazon user name and password. All available data needed for creating an account or placing an order in your Magento shop (including name, email address, and zip code) are fetched automatically from customer's Amazon account.
+**Login with Amazon** allows users to login to your shop using their Amazon user name and password. All available data needed for creating an account or placing an order in your OpenMage shop (including name, email address, and zip code) are fetched automatically from customer's Amazon account.
 
 Requirements
 ------------
-**Login with Amazon** service requires you to have a valid **Amazon Payments** account and Magento store with a valid SSL certificate installed and properly configured in your shop. By "installed and properly configured SSL certificate" it is meant that your webserver is configured to serve pages via HTTPS protocol, `Base URL` config option is set to the HTTPS-based URL and in :menuselection:`Web --> Secure` section of Magento settings.
+**Login with Amazon** service requires you to have a valid **Amazon Payments** account and OpenMage shop with a valid SSL certificate installed and properly configured in your shop. By "installed and properly configured SSL certificate" it is meant that your webserver is configured to serve pages via HTTPS protocol, `Base URL` config option is set to the HTTPS-based URL and in :menuselection:`Web --> Secure` section of OpenMage settings.
 
 :guilabel:`Login with Amazon` button
 ------------------------------------

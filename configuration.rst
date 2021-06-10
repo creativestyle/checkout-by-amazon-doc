@@ -1,11 +1,8 @@
-.. important::
-   This extension is under the active development even though Adobe dropped the support for Magento 1.x e-commerce platform (Jul 1st, 2020). Creativestyle will provide the necessary updates and support for this extension as long as this extension will be used by the active Amazon Pay merchants.
-
 .. _configuration:
 
 Configuration
 =============
-After the successful installation you can proceed to the configuration. In Magento admin go to :menuselection:`creativestyle --> Amazon Pay and Login with Amazon --> Settings` (or :menuselection:`System --> Configuration --> Amazon Payments` tab).
+After the successful installation you can proceed to the configuration. In OpenMage admin go to :menuselection:`creativestyle --> Amazon Pay and Login with Amazon --> Settings` (or :menuselection:`System --> Configuration --> Amazon Payments` tab).
 
 .. image:: /images/configuration_1.png
 
@@ -79,7 +76,7 @@ Login with Amazon
 
 :guilabel:`Enable`
 ''''''''''''''''''
-By switching this option you can enable or disable **Login with Amazon** feature. This service must be enabled if you want to create customer accounts in your Magento shop when order is placed and to make sure that any of the orders paid with **Amazon Payments** will be never a guest order.
+By switching this option you can enable or disable **Login with Amazon** feature. This service must be enabled if you want to create customer accounts in your OpenMage shop when order is placed and to make sure that any of the orders paid with **Amazon Payments** will be never a guest order.
 
 .. _configuration-login-with-amazon-button-color:
 
@@ -180,7 +177,7 @@ Developer options
 
 :guilabel:`Enable logging`
 ''''''''''''''''''''''''''
-The Pay with Amazon extension comes with a dedicated logging mechanism. If this option is enabled all exceptions and API calls will be saved to the appropriate log file in :file:`var/log/amazonpayments/v2` directory in your Magento installation.
+The Pay with Amazon extension comes with a dedicated logging mechanism. If this option is enabled all exceptions and API calls will be saved to the appropriate log file in :file:`var/log/amazonpayments/v2` directory in your OpenMage installation.
 
 .. _configuration-developer-allowed-ips:
 

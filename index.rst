@@ -1,17 +1,20 @@
 .. image:: /images/amazon_payments_logo.png
    :align: left
 
-==============================================
-Amazon Checkout - extension for Magento 1.x EU
-==============================================
+====================================================
+Amazon Pay (Checkout v2) - extension for OpenMage EU
+====================================================
 
 Proudly provided by:
 
 .. image:: /images/creativestyle_logo.png
    :align: center
 
-.. note::
-   This extension is under the active development even though Adobe dropped the support for Magento 1.x e-commerce platform (Jul 1st, 2020). Creativestyle will provide the necessary updates and support for this extension as long as this extension will be used by the active Amazon Pay merchants.
+.. centered::
+   creativestyle is a leading e-commerce agency with offices in Germany and Poland. For more information, please visit https://www.creativestyle.de
+
+.. warning::
+   Magento 1.x support has been dropped. Consider migration to `OpenMage <https://www.openmage.org>`_.
 
 .. toctree::
    :maxdepth: 3
@@ -23,4 +26,5 @@ Proudly provided by:
    customization
    login
    workflow
+   faq
    troubleshooting
