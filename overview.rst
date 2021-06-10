@@ -1,12 +1,9 @@
-.. note::
-   This extension is under the active development even though Adobe dropped the support for Magento 1.x e-commerce platform (Jul 1st, 2020). Creativestyle will provide the necessary updates and support for this extension as long as this extension will be used by the active Amazon Pay merchants.
-
 Overview
 ========
 
-This extension provides an official integration of your Magento store with **Amazon Pay** service. They help your customers shop quickly, safely and securely. Your customers can pay on your website without re-entering their payment and address details. All Amazon transactions are protected by Amazon's A-to-z Guarantee.
+This extension provides an official integration of your OpenMage store with **Amazon Pay** service. They help your customers shop quickly, safely and securely. Your customers can pay on your website without re-entering their payment and address details. All Amazon transactions are protected by Amazon's A-to-z Guarantee.
 
-The extension is a pure payment solution. No item level is communicated to Amazon Payments and it allows you to manage your orders directly from Magento.
+The extension is a pure payment solution. No item level is communicated to Amazon Payments and it allows you to manage your orders directly from OpenMage.
 
 About Amazon Pay
 ----------------
@@ -33,7 +30,7 @@ Key Features
 Getting the extension
 ---------------------
 
-You can install the extension either via Magento Connect Manager or manually, downloading the installation package from `Creativestyle Magento 1.x connect channel <https://connect.creativestyle.de/Creativestyle_AmazonCheckout>`_.
+You can install the extension either via Connect Manager or manually, downloading the installation package from `Creativestyle connect channel <https://connect.creativestyle.de/Creativestyle_AmazonCheckout>`_.
 
 Refer to the :ref:`installation` section to get more details concerning installation procedure.
 
