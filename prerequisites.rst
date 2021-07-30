@@ -5,7 +5,7 @@ Prerequisites
 System requirements
 -------------------
 
-**Amazon Pay (Checkout v2)** extension for OpenMage requires you to have a valid **Amazon Payments** account and a webserver running an OpenMage store instance with the following conditions met:
+**Amazon Pay** extension for OpenMage requires you to have a valid **Amazon Payments** account and a webserver running an OpenMage store instance with the following conditions met:
 
 * OpenMage 19.4.4 or higher
 * cURL for PHP

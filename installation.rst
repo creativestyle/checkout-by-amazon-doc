@@ -34,7 +34,7 @@ and click :guilabel:`Install` button. Connect Manager will validate the key and 
 
 .. image:: /images/connect_manager_step_3.png
 
-* After the successful installation, please click on :guilabel:`Refresh` button to refresh the list of the installed extensions and assure that **Amazon Checkout** is present on that list.
+* After the successful installation, please click on :guilabel:`Refresh` button to refresh the list of the installed extensions and make sure that **Amazon Pay** is present on that list.
 
 * Proceed to the :ref:`post-installation-steps`.
 
@@ -53,12 +53,12 @@ Manual installation
 Post-installation steps
 -----------------------
 
-* If you're using custom design theme, refer to the :ref:`Templates customization <customization-frontend-templates>` section to find out how to adjust **Amazon Pay (Checkout v2)** templates to your needs.
+* If you're using custom design theme, refer to the :ref:`Templates customization <customization-frontend-templates>` section to find out how to adjust **Amazon Pay** templates to your needs.
 * Go to :menuselection:`System --> Cache Management` and flush OpenMage cache storage.
 * If you have disabled compiler in pre-installation stage, you can go now to :menuselection:`System --> Tools --> Compilation`, recompile and enable compiler again.
 * Logout from the OpenMage admin and login again.
 
-Voila! The **Amazon Pay (Checkout v2)** extension shall be installed now. You can proceed to the :ref:`configuration` followed by :ref:`customization-frontend-templates` customization (if applicable).
+Voila! The **Amazon Pay** extension shall be installed now. You can proceed to the :ref:`configuration` followed by :ref:`customization-frontend-templates` customization (if applicable).
 
 
 Upgrade
@@ -79,7 +79,7 @@ Upgrade process
 
 .. image:: /images/connect_manager_step_2.png
 
-* Click :guilabel:`Check for Upgrades` button in the :guilabel:`Manage Existing Extensions` section. If the newest version of Amazon Checkout is available, the Creativestyle_AmazonCheckout extension on the list will be highlighted with the yellow color. In the corresponding action dropdown list please select :guilabel:`Upgrade to X.X.X (stable)` option and click :guilabel:`Commit changes` button.
+* Click :guilabel:`Check for Upgrades` button in the :guilabel:`Manage Existing Extensions` section. If the newest version of Amazon Pay is available, the Creativestyle_AmazonCheckout extension on the list will be highlighted with the yellow color. In the corresponding action dropdown list please select :guilabel:`Upgrade to X.X.X (stable)` option and click :guilabel:`Commit changes` button.
 
 * After the successful upgrade, please click on :guilabel:`Refresh` button to refresh the list of the installed extensions and assure that **Amazon Chekout v2** (identified as `Creativestyle_AmazonCheckout`) was upgraded to the desired version.
 

@@ -1,9 +1,9 @@
 .. image:: /images/amazon_payments_logo.png
    :align: left
 
-====================================================
-Amazon Pay (Checkout v2) - extension for OpenMage EU
-====================================================
+======================================
+Amazon Pay - extension for OpenMage EU
+======================================
 
 Proudly provided by:
 
